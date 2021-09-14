@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Main {
-
+    static MainForm form;
     public static void main(String[] args) {
         try {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -21,6 +21,12 @@ public class Main {
         } catch (IOException | FontFormatException | UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
-        MainForm form = new MainForm();
+
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                form = new MainForm();
+            }
+        });
     }
 }

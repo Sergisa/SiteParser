@@ -15,10 +15,10 @@ public class TagListCellRenderer extends JPanel implements ListCellRenderer<Tag>
         setLayout(new FlowLayout(FlowLayout.LEFT, 9, 1));
         //setLayout(new BorderLayout(9, 1));
         tagNameLabel = new JLabel();
-        tagNameLabel.setFont(new Font("Montserrat Regular", Font.ITALIC | Font.BOLD, 12));
+        tagNameLabel.setFont(new Font("Montserrat Regular", Font.ITALIC | Font.BOLD, 14));
 
         tagLinkLabel = new JLabel();
-        tagLinkLabel.setFont(new Font("Montserrat Regular", Font.PLAIN, 12));
+        tagLinkLabel.setFont(new Font("Montserrat Regular", Font.PLAIN, 14));
 
 
         add(tagNameLabel);
@@ -39,6 +39,7 @@ public class TagListCellRenderer extends JPanel implements ListCellRenderer<Tag>
         }
 
         if (isSelected) {
+            //setBackground(new Color(75,110,175));
             setBackground(new Color(0xBDBDBD));
         } else {
             setBackground(null);
